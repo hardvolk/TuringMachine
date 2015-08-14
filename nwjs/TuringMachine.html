@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      
+      
+      <script type="text/javascript" src="../js/jquery-2.1.3.min.js"></script>
+      
+      
+      
+      <link type="text/css" href="../css/Reset.css" rel="stylesheet" >
+      <link type="text/css" href="../css/Style.css" rel="stylesheet" >
+      
+    
+  
+  </head>
+    <body>
+        <div id="MessageBoxBG"><div id="MessageBox"><p></p><button value="Aceptar">Aceptar</button></div></div>
+        <div id="MainContainer">
+            <div id="TuringMachine">
+                <div id="StringContainer">
+                    <p id="String">&#8226;&#8226;&#8226;</p>
+                    <div id="Cursor">&nbsp;</div>
+                </div>
+            </div>    
+            <div id="InputContainer">
+                <input type="text" id="InputText" placeholder="Ingresar Cadena...">
+                <input id="run" type="button" value="Run">
+            </div>
+        </div>
+        
+        <!-- AQUI VA LA MAGIA -->
+        <script type="text/javascript" src="../js/MessageBox.js"></script>
+        <script type="text/javascript" src="../js/TuringMachine.js"></script>
+        <script type="text/javascript">           
+            var str= "", string = "";
+            
+            // EVENTO CLICK DEL BOTON
+            $("#run").on("click",function(){
+                str = $("#InputText").val();
+                string = "";
+                string = "_";
+                string+=str + "_";
+                Cursor.css("marginLeft","0px");
+                TuringMachine(string, 0);
+            });
+        
+        
+        
+        </script>        
+        
+    </body>
+</html>

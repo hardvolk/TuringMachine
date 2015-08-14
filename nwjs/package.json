@@ -1,0 +1,13 @@
+{
+  "name": "TuringMachine",
+  "main": "TuringMachine.html",
+  "window": {
+      "title": "Turing Machine",
+      "toolbar": false,
+      "width": 800,
+      "height": 600,
+      "min_width": 960,
+      "min_height": 520,
+      "position": "center"
+  }
+}
